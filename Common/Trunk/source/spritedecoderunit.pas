@@ -267,7 +267,8 @@ begin
 end;
 
 procedure t3flmdecoder.encode(flh, flm: tmemorystream);
-var t1, t2, lA, lF: integer;
+var t1, t2:cardinal;
+  lA, lF: integer;
   lw1, flags: longword;
   frame: t3frame;
   maxwidth, maxheight, w1: word;
