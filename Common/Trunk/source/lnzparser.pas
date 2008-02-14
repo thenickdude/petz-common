@@ -133,7 +133,7 @@ type
     class function comment: string; override;
   end;
 
-  TLNZOutlineoverride = class(TLNZBallRef, IPFLine, IBallRef, IDescriptive)
+  TLNZOutlineOverride = class(TLNZBallRef, IPFLine, IBallRef, IDescriptive)
   public
     colour: integer;
     function UpdateReference(ref: treferencetype; start: integer; op: tupdateop): boolean; override;
