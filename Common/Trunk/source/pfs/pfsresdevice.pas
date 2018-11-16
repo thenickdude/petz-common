@@ -2,7 +2,7 @@ unit pfsresdevice;
 
 interface
 
-uses sysutils, contnrs, windows, classes, pfs, resourceaccessunit, proceduretomethod,
+uses sysutils, contnrs, windows, classes, pfs,  proceduretomethod,
   madres, masks;
 
 type
@@ -20,10 +20,15 @@ type
     procedure LoadFileFromStream(const path: string; stream: tstream);
     procedure FindFiles(const path: string; list: TObjectList);
     constructor create(const filename: string; const extmask: string = '');
-    destructor destroy; override;
+    destructor Destroy; override;
   end;
 
 implementation
+
+function isintresource(resname:pchar):boolean;
+begin
+  result:=false;
+end;
 
 constructor TPFSResDevice.create(const filename: string; const extmask: string = '');
 begin

@@ -1,7 +1,7 @@
 unit petzresourcestoreunit;
 
 interface
-uses sysutils, classes, contnrs, resourceaccessunit, windows, madres;
+uses sysutils, classes, contnrs,  windows, madres, pfsresdevice;
 type
   TPetzResType = (rtFile, rtDLL, rtFolder);
 
@@ -52,6 +52,11 @@ type
 var PetzResourceStore: TPetzResourceStore;
 
 implementation
+
+function isintresource(resname:pchar):boolean;
+begin
+  result:=false;
+end;
 
 function tpetzresourcefile.savetostream(stream: tstream): boolean;
 var f: tfilestream;
